@@ -1,9 +1,10 @@
-package com.example.weatherwidget;
+package fr.tonychouteau.weatherwidget;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
+
+import com.example.weatherwidget.R;
 
 public class MainActivity extends AppCompatActivity {
 

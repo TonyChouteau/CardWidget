@@ -10,10 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherWidget">
         <receiver
-            android:name=".Widget"
+            android:name="fr.tonychouteau.weatherwidget.Widget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="fr.tonychouteau.weatherwidget.Widget.APPWIDGET_CLICK" />
             </intent-filter>
 
             <meta-data
@@ -22,7 +23,7 @@
         </receiver>
 
         <activity
-            android:name=".MainActivity"
+            android:name="fr.tonychouteau.weatherwidget.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
