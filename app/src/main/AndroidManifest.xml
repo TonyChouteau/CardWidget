@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.weatherwidget">
+    package="com.example.cardwidget">
 
     <application
         android:allowBackup="true"
@@ -8,13 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WeatherWidget">
+        android:theme="@style/Theme.CardWidget">
         <receiver
-            android:name="fr.tonychouteau.weatherwidget.Widget"
+            android:name="fr.tonychouteau.cardwidget.Widget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="fr.tonychouteau.weatherwidget.Widget.APPWIDGET_CLICK" />
+                <action android:name="fr.tonychouteau.cardwidget.Widget.APPWIDGET_CLICK" />
             </intent-filter>
 
             <meta-data
@@ -23,7 +23,7 @@
         </receiver>
 
         <activity
-            android:name="fr.tonychouteau.weatherwidget.MainActivity"
+            android:name="fr.tonychouteau.cardwidget.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

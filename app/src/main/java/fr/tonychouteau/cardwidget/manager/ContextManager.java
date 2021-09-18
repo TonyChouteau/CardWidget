@@ -1,4 +1,4 @@
-package fr.tonychouteau.weatherwidget.manager;
+package fr.tonychouteau.cardwidget.manager;
 
 import android.content.Context;
 import android.widget.RemoteViews;

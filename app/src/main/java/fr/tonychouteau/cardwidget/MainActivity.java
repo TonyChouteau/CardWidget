@@ -1,10 +1,10 @@
-package fr.tonychouteau.weatherwidget;
+package fr.tonychouteau.cardwidget;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.weatherwidget.R;
+import com.example.cardwidget.R;
 
 public class MainActivity extends AppCompatActivity {
 

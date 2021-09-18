@@ -1,4 +1,4 @@
-package fr.tonychouteau.weatherwidget;
+package fr.tonychouteau.cardwidget;
 
 import org.junit.Test;
 

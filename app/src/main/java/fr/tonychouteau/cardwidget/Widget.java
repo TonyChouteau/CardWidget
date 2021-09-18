@@ -1,4 +1,4 @@
-package fr.tonychouteau.weatherwidget;
+package fr.tonychouteau.cardwidget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -8,9 +8,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
 
-import com.example.weatherwidget.R;
+import com.example.cardwidget.R;
 
-import fr.tonychouteau.weatherwidget.manager.ContextManager;
+import fr.tonychouteau.cardwidget.manager.ContextManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -28,7 +28,7 @@ public class Widget extends AppWidgetProvider {
     public void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {
 
         // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.id.widget_container);
 
         this.contextManager = new ContextManager(context, views, appWidgetId);
         this.initOnClickListener();
@@ -51,9 +51,9 @@ public class Widget extends AppWidgetProvider {
     }
 
     public void displayVersion() {
-        Date currentTime = Calendar.getInstance().getTime();
-        SimpleDateFormat format = new SimpleDateFormat("h:mm:ss");
-        this.contextManager.views.setTextViewText(R.id.date, format.format(currentTime));
+//        Date currentTime = Calendar.getInstance().getTime();
+//        SimpleDateFormat format = new SimpleDateFormat("h:mm:ss");
+//        this.contextManager.views.setTextViewText(R.id.date, format.format(currentTime));
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Widget extends AppWidgetProvider {
         super.onReceive(context, intent);
 
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget);
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.id.widget_container);
 
         int[] appWidgetIDs = appWidgetManager
                 .getAppWidgetIds(new ComponentName(context, Widget.class));
